@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Raleway:wght@200;500&display=swap');
+
+:root {
+    /* Colors */
+    --white: #FFFFFF;
+    --black: #000000;
+    --red: #E23B3B;
+    --footer: #202020;
+
+    /*  fonts */
+    --monserrat: 'Montserrat', sans-serif;
+    --raleway: 'Raleway', sans-serif;
+}
+
+/* general */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+*:focus {
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(236, 236, 236);
+    font-family: var(--raleway);
+    color: var(--black);
+}
+
+h1, h2, h3 {
+    font-family: var(--monserrat);
+    font-weight: 900;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+} a:hover {
+    text-decoration: underline;
+    color: var(--red);
+}
+
+.container {
+    max-width: 768px;
+    margin: 0 1.5rem 0 1.5rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+footer {
+    background-color: var(--footer);
+    display: flex;
+    padding: 55px 135.1px;
+    color: var(--white);
+    font-weight: 100;
+}
+
+button {
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    font-family: var(--raleway);
+    width: 100%;
+    background-color: var(--red);
+    color: var(--white);
+    cursor: pointer;
+} button:hover {
+    background-color: #f75e38;
+}
+
+/* Nav */
+.nav {
+    max-width: 1000px;
+    height: 4.5rem;
+    column-gap: 1rem;
+    margin: 0 135.1px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.scroll__active {background-color: var(--footer);}
+
+.nav__list {
+    display: flex;
+    column-gap: 2rem;
+    align-items: center;
+}
+
+.nav__menu {
+    margin-left: auto;
+}
+
+.nav__link--cart {
+    font-size: 30px;
+}
+
+/* Poster */
+.head {
+    height: 80vh;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 30%), rgba(0, 0, 0, 30%)), url("../../images/paintings.jpeg");
+    background-position: center;
+
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(6,1fr);
+}
+
+.head__title {
+    grid-column: 2/9;
+    grid-row: 4/5;
+    color: var(--white);
+    align-self: flex-end;
+}
+
+.head__title--expo {
+    font-size: 90px;
+    line-height: 80px;
+    text-transform: uppercase;
+}
+
+/* Tarjetas */
+.exhibitions {
+    max-width: 1080px; 
+	margin: 40px auto 0 !important; 
+	float: none !important; 
+    
+    display: grid;
+    grid-template: repeat(3,1fr) / repeat(3,1fr);
+}
+
+.exhibition__card {
+    padding: 20px;
+} .exhibition__card--info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+
+    background-color: var(--white);
+    line-height: 26px;
+    font-size: 18px;
+    text-transform: uppercase;
+} .exhibition__card--info dl {
+    text-transform: none;
+    font-size: 15px;
+    font-weight: 100;
+} .exhibition__card a {
+    color: var(--black);
+} .exhibition__card a:hover{
+    color: var(--red);
+}
+
+.exhibition {
+    height: 26vh;
+    margin-bottom: 10px;
+    background-color: var(--red);
+    /* background-image: linear-gradient(rgba(0, 0, 0, 27%), rgba(0, 0, 0, 27%)), url("../../images/"); */
+    background-size: cover;
+    background-position: center;
+}
+
+.more{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    line-height: 10px;
+} .more h1 {
+    font-size: 40px;
+} .more h2 {
+    font-size: 20px;
+}
+
+.exhibition__card--booked {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+} .--price {
+    font-family: var(--raleway);
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--footer);
+} .--add {
+    background-color: var(--red);
+    width: 50%;
+}
+
+/* SECTION */
+.interlude {
+    display: flex;
+    max-width: 1080px; 
+	margin: 40px auto 60px !important; 
+	float: none !important; 
+}
+
+.interlude__addSection {
+    height: 60vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 30%), rgba(0, 0, 0, 30%)), url("../../images/louvre-paris-athenes.jpg");
+    background-size: cover;
+    background-position: center;
+
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(3,1fr);
+    border-radius: 25px;
+}
+
+.interlude__addSection--anounce {
+    display: flex;
+    align-self: center;
+    text-align: center;
+    
+    grid-column: 2/7;
+    grid-row: 2;
+    color: var(--white);
+    font-size: 33px;
+    font-weight: 500;
+}
+
+.interlude__addSection--links {
+    grid-column: 2/7;
+    grid-row: 3;
+    color: var(--white);
+
+    text-align: center;
+}
+
+.interlude__museums {
+    margin: 10px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.categories {
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.museums {
+    background-color: var(--footer);
+    padding: 20px 30px;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    color: var(--white);
+    box-shadow: 0px 5px 10px rgb(190, 186, 186);
+} .museums:last-child {
+    margin-bottom: 0;
+    line-height: 27px;
+} .museums:hover {
+    color: var(--red);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* info */
+.info {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 24px;
+}
+
+.info h2 {
+    color: var(--black);
+}
+
+.info ul {
+    margin: 5px 0 0 30px;
+}
+
+.sponsor ul {
+    display: flex;
+}
+
+.sponsor ul div {
+    width: 80%;
+}
+
+/* footer */
+footer .logo {
+    align-self: center;
+    flex-grow: 1;
+}
+
+footer .social__media {
+    flex-grow: 0.5;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+footer div {
+    margin-top: 15px;
+    margin-right: 20px;
+}
+
+.label__footer {
+    width: 20%;
+}
+
+footer h4 {
+    letter-spacing: 0.5px;
+}
+
+footer h4, footer li {
+    margin-bottom: 10px;
+    color: var(--white);
+}
+
+footer input {
+    margin-bottom: 7px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    font-family: var(--raleway);
+    width: 100%;
+}
+
+
+/* div images */
+.paris {
+    background-image: linear-gradient(rgba(0, 0, 0, 27%), rgba(0, 0, 0, 27%)), url("../../images/louvre-paris-athenes.jpg");
+}
+.surrealism {
+    background-image: linear-gradient(rgba(0, 0, 0, 27%), rgba(0, 0, 0, 27%)), url("../../images/metmuseum/surrealism.jpg");
+}
+.disney {
+    background-image: linear-gradient(rgba(0, 0, 0, 27%), rgba(0, 0, 0, 27%)), url("../../images/metmuseum/disney.jpg");
+}
+.afar {
+    background-image: linear-gradient(rgba(0, 0, 0, 27%), rgba(0, 0, 0, 27%)), url("../../images/Louvre/from-afar.jpg");
+}
+.laurent {
+    background-image: linear-gradient(rgba(0, 0, 0, 27%), rgba(0, 0, 0, 27%)), url("../../images/Louvre/YSL.png");
+}
+.native {
+    background-image: linear-gradient(rgba(0, 0, 0, 27%), rgba(0, 0, 0, 27%)), url("../../images/metmuseum/native-american.jpg");
+}
+.hokusai {
+    background-image: linear-gradient(rgba(0, 0, 0, 27%), rgba(0, 0, 0, 27%)), url("../../images/britmuseum/hokusai.jpg");
+}
+.before {
+    background-image: linear-gradient(rgba(0, 0, 0, 27%), rgba(0, 0, 0, 27%)), url("../../images/metmuseum/before-yesterday.jpg");
+}
